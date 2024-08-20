@@ -1,0 +1,250 @@
+{% extends '../index_master.html'%}
+
+{% block titulo %} Analisis Tecnico {% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Análisis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        select, input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .form-container {
+            display: flex;
+            gap: 20px;
+        }
+        .form-column {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de Análisis</h1>
+    <fieldset>
+        <legend>Sección 1: Análisis de Sitio</legend>
+        <div class="form-container">
+            <div class="form-column">
+                <label for="av-principal-acc"><h2>Accesibilidad:</h2></label>
+                <input type="checkbox" > Av.Principal <br>
+                <input type="checkbox" > Av. Secundaria <br>
+                <input type="checkbox" > Calle Barrial <br>
+                <input type="checkbox" > Pasaje Vehicular <br>
+                <input type="checkbox" > Pasaje peatonal <br>
+                <!-- Otra Seccion -->
+
+                <label for="av-principal-acc"><h2>Servicios:</h2></label>
+                <input type="checkbox" > Luz <br>
+                <input type="checkbox" > Agua <br>
+                <input type="checkbox" > Alcantarillado <br>
+                <input type="checkbox" > Rec. Basura <br>    
+                <input type="checkbox" > Telefono <br>
+                <input type="checkbox" > Repartidor de Gas <br>
+                <input type="checkbox" > Alumbrado Publico <br>
+                <input type="checkbox" > Bordillos <br>
+                <input type="checkbox" > Aceras <br>    
+                <input type="checkbox" > Calzada <br>
+                <input type="checkbox" > Tv Cable <br>    
+                <input type="checkbox" > Hidratantes <br>
+                <input type="checkbox" > Alarma Comunitaria <br>
+                <input type="checkbox" > Internet FibraOptica <br>    
+                <input type="checkbox" > Policia Comunitaria <br>
+                <input type="checkbox" > Soterramiento <br>    
+                <input type="checkbox" > Lavado Seco <br>
+                <input type="checkbox" > Transporte Publico <br>
+                <!-- Otra Seccion -->
+
+                <label for="av-principal-acc"><h2>Colindancia:</h2></label>
+                <input type="checkbox" > Ninguna <br>
+                <input type="checkbox" > Poco conflictiva <br>
+                <input type="checkbox" > Conflictiva <br>
+                <input type="checkbox" > Muy conflictiva <br>
+                <input type="checkbox" > Pasaje peatonal <br>
+                <!-- Otra Seccion -->
+            </div>
+
+            <div class="form-column">
+                <label for="av-principal-acc"><h2>Equipamiento:</h2></label>
+                <input type="checkbox" > Hospital <br>
+                <input type="checkbox" > Universidad <br>
+                <input type="checkbox" > Parque Metrop <br>
+                <input type="checkbox" > Centro Comercial <br>    
+                <input type="checkbox" > Clinica <br>
+                <input type="checkbox" > Unidad Educativa <br>
+                <input type="checkbox" > Parque de Sector <br>
+                <input type="checkbox" > Plaza Comercial <br>
+                <input type="checkbox" > Centro de Salud <br>    
+                <input type="checkbox" > Centro Infantil <br>
+                <input type="checkbox" > Parque de Barrio <br>    
+                <input type="checkbox" > Mercado <br>
+                <!-- Otra Seccion -->
+
+                <label for="av-principal-acc"><h2>Salidas:</h2></label>
+                <input type="checkbox" > a 4 vias <br>
+                <input type="checkbox" > a 3 vias <br>
+                <input type="checkbox" > a 2 vias <br>
+                <input type="checkbox" > a 1 via <br>    
+                <input type="checkbox" > Pasaje Peatonal <br>
+                <!-- Otra seccion-->
+
+                <label for="av-principal-acc"><h2>Orientacion:</h2></label>
+                <input type="checkbox" > Norte <br>
+                <input type="checkbox" > Sur <br>
+                <input type="checkbox" > Este <br>
+                <input type="checkbox" > Oeste <br>
+                <!-- Otra seccion-->
+
+                <label for="av-principal-acc"><h2>Dimesiones:</h2></label>
+                <label for="luz">Longitud de Frente:<input type="text" id="luz" name="luz"></label>
+                <label for="luz">Longitud de Fondo:<input type="text" id="luz" name="luz"></label>
+                <label for="luz">Area o Superficie:<input type="text" id="luz" name="luz"></label>
+                <label for="luz">Relacion Frente - Fondo:<input type="text" id="luz" name="luz"></label>
+                
+                <!-- Otra seccion-->
+            </div>
+
+            <div class="form-column">
+                <label for="av-principal-acc"><h2>Forma:</h2></label>
+                <input type="checkbox" > Regula <br>
+                <input type="checkbox" > Poco Regular <br>
+                <input type="checkbox" > Irregular <br>
+                <input type="checkbox" > Muy Irregula <br>
+                <!-- Otra seccion-->
+
+                <label for="av-principal-acc"><h2>Forma:</h2></label>
+                <input type="checkbox" > Regula <br>
+                <input type="checkbox" > Poco Regular <br>
+                <input type="checkbox" > Irregular <br>
+                <input type="checkbox" > Muy Irregula <br>
+                <!-- Otra seccion-->
+
+                <label for="av-principal-acc"><h2>Pendiente:</h2></label> 
+                <input type="checkbox" > (+)Pronunciada <br>
+                <input type="checkbox" > (+)Moderada <br>
+                <input type="checkbox" > Nula <br>
+                <input type="checkbox" > (-)Moderada <br>    
+                <input type="checkbox" > (-)Pronunciada <br>
+                <!-- Otra Seccion -->
+
+                <label for="av-principal-acc"><h2>Estado Fisico:</h2></label> 
+                <input type="checkbox" >Baldío - Limpio <br>
+                <input type="checkbox" > Baldío - Descuidado <br>
+                <input type="checkbox" > Vegetación Pequeña <br>
+                <input type="checkbox" > Vegetación Grande <br>    
+                <input type="checkbox" > Cerramiento Parcial <br>
+                <input type="checkbox" > Cerramiento Total <br>
+                <input type="checkbox" > Construcción Menor <br>    
+                <input type="checkbox" > Construcción Pequeña <br>
+                <input type="checkbox" > Construcción Mediana <br>
+                <!-- Otra Seccion -->
+
+                <label for="av-principal-acc"><h2>Vista:</h2></label> 
+                <input type="checkbox" > Ninguna <br>
+                <input type="checkbox" > Favorable <br>
+                <input type="checkbox" > Desfavorable <br>
+                <!-- Otra Seccion -->
+            </div>
+        </div>
+        <!-- Otra Seccion-->
+
+        
+        <div class="form-container">
+            <div class="form-column">
+                <legend>Sección 2: Análisis de Cabida</legend>
+                <input type="checkbox" > COS PB <br>
+                <input type="checkbox" > COS TOTAL <br>
+                <input type="checkbox" > Área útil PB <br>
+                <input type="checkbox" > Área Útil Total  <br>
+                <input type="checkbox" > Pasaje peatonal <br>
+                <input type="checkbox" > Retiro Frontal <br>
+                <input type="checkbox" > Retiro Posterior <br>
+                <input type="checkbox" > N. Pisos  <br>
+                <input type="checkbox" > Unidades de Vivienda <br>
+                <input type="checkbox" > Unidades de Comercio <br>
+                <!-- Otra Seccion -->
+
+                <label for="av-principal-acc"><h2>Area Comunal:</h2></label>
+                <input type="checkbox" > Recreativa Abierta  <br>
+                <input type="checkbox" > Reacreativa Cerrada <br>
+                <input type="checkbox" > Salon Comunal  <br>
+                <input type="checkbox" > Parqueaderos <br>    
+                <input type="checkbox" > Cuarto de Basura <br>
+                <input type="checkbox" > Garita <br>
+                <input type="checkbox" > Concerjeria <br>
+                <input type="checkbox" > Ductos <br>
+                <input type="checkbox" > Ascensor <br> 
+                <!-- Otra Seccion -->
+
+            </div>
+
+            <div class="form-column">
+                <legend>Análisis Tecnologico</legend>
+                <input type="checkbox" > Lev. Topográfico <br>
+                <input type="checkbox" > Estudio de Suelos <br>
+                <input type="checkbox" > Diseño de Muros <br>
+                <input type="checkbox" > Cambio de Diámetro AP <br>    
+                <input type="checkbox" > Reubicación Punto AP  <br>
+                <input type="checkbox" > Reub. S. Alcantarillado  <br>
+                <input type="checkbox" > Reubicación de Postes <br>
+                <input type="checkbox" > Transformador Electrico <br>
+                <input type="checkbox" > P. Solares Agua <br>    
+                <input type="checkbox" > P. Solares Electricidad <br>
+                <input type="checkbox" > Cisterna / Tanque R <br>    
+                <input type="checkbox" > Reutilización A. LL <br>
+                <input type="checkbox" >Pozo de agua <br>
+                <input type="checkbox" > Pozo Septico <br>
+                <input type="checkbox" > Biodigestor <br>
+                <input type="checkbox" > Generador Electrico <br>    
+                <input type="checkbox" > Cerca Eléctrica <br>
+                <input type="checkbox" > Cámaras de Video <br>
+                <input type="checkbox" > Portero Eléctrico <br>
+                <input type="checkbox" > Control de Accesos <br>
+                <input type="checkbox" > Rejas Metálicas <br>
+                <!-- Otra seccion-->
+            </div>
+
+            <div class="form-column">
+                <label for="av-principal-acc"><h2>Analisis Tecnico-Legal:</h2></label>
+                <input type="checkbox" > Regularización de Áreas <br>
+                <input type="checkbox" > Libre de Gravamen <br>
+                <input type="checkbox" > Irregular <br>
+                <input type="checkbox" > Afectacion Vial  <br>
+                <input type="checkbox" > Libre de Hipoteca <br>
+                <input type="checkbox" > En Derechos y acciones <br>
+                <input type="checkbox" > Doble Zonificacion <br>
+                <input type="checkbox" > Propiedad Horizontal <br>
+                <input type="checkbox" > Impuesto predial <br>
+            </div>
+        </div>
+
+    </fieldset>
+</body>
+</html>
+
+
+           
+
+
+{% endblock %}

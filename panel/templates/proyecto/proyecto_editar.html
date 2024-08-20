@@ -1,0 +1,20 @@
+{% extends 'index_master.html' %}
+
+{% block titulo %} editar proyecto {% endblock %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            Editar Información
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Datos del Proyecto</h4>
+            {% block proyecto_editar %}
+                <!-- Aquí va el contenido específico para editar el proyecto -->
+            {% endblock %}
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+{% endblock %}
+

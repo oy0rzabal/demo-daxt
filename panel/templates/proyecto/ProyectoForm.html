@@ -1,0 +1,207 @@
+{% extends '../index_master.html' %}
+
+{% block titulo %} agregar proyectos {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="stylespo.css"> <!-- Asegúrate de que el nombre del archivo CSS sea correcto -->
+
+<style>
+    .card-centered {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    /* Estilo para el formulario */
+    .form-container {
+        max-width: 800px; /* Ajusta el ancho máximo según lo necesites */
+        margin: 0 auto;   /* Centra el formulario horizontalmente */
+        padding: 20px;
+    }
+
+    /* Estilo para la tarjeta */
+    .card-centered {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    
+</style>
+<!--Style-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <!-- Tu formulario aquí -->
+            <form enctype="multipart/form-data" method="post">
+                <div class="card">
+                    <div class="container mt-4">
+                        <h2 class="mb-4 text-center">Características del Proyecto</h2>
+                        <div class="card card-centered">
+                            <div class="card-body">
+                                {% csrf_token %}
+                                <div class="form-container">
+                                    <div class="form-group">
+                                        <label for="nombre-privado">Nombre Privado <span class="text-muted">(Opcional)</span></label>
+                                        <input type="text" class="form-control" id="nombre-privado" placeholder="Torres Acapulco Diamante">
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="categoria">Categoría <span class="text-danger">*</span></label>
+                                        <select class="form-control" id="categoria">
+                                            <option>Departamento</option>
+                                            <option>Casa</option>
+                                            <option>Terreno</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="codigo-interno">Código Interno <span class="text-muted">(Opcional)</span></label>
+                                        <input type="text" class="form-control" id="codigo-interno" placeholder="A1-3245">
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="niveles">Cantidad de niveles <span class="text-muted">(Opcional)</span></label>
+                                        <input type="number" class="form-control" id="niveles" placeholder="40">
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="condicion">Condición / Estado</label>
+                                        <select class="form-control" id="condicion">
+                                            <option>En Planos</option>
+                                            <option>En Construcción</option>
+                                            <option>Terminado</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="estilo">Estilo</label>
+                                        <select class="form-control" id="estilo">
+                                            <option>Moderno</option>
+                                            <option>Clásico</option>
+                                            <option>Rústico</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="propiedad-exclusiva">¿Propiedad Exclusiva?</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="propiedad-exclusiva" id="si-exclusiva" value="si">
+                                            <label class="form-check-label" for="si-exclusiva">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="propiedad-exclusiva" id="no-exclusiva" value="no">
+                                            <label class="form-check-label" for="no-exclusiva">No</label>
+                                        </div>
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="propiedad-destacada">¿Propiedad Destacada?</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="propiedad-destacada" id="si-destacada" value="si">
+                                            <label class="form-check-label" for="si-destacada">Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="propiedad-destacada" id="no-destacada" value="no">
+                                            <label class="form-check-label" for="no-destacada">No</label>
+                                        </div>
+                                    </div>
+            
+                                    <h2 class="mb-4">Ubicación</h2>
+            
+                                    <div class="form-group">
+                                        <label for="pais">País <span class="text-danger">*</span></label>
+                                        <select class="form-control" id="pais">
+                                            <option>México</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="estado">Estado/ Provincia <span class="text-danger">*</span></label>
+                                        <select class="form-control" id="estado">
+                                            <option>Guerrero</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="ciudad">Ciudad/ Delegación <span class="text-danger">*</span></label>
+                                        <select class="form-control" id="ciudad">
+                                            <option>Acapulco Guerrero</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="direccion1">Dirección 1 <span class="text-muted">(Opcional)</span></label>
+                                        <input type="text" class="form-control" id="direccion1" placeholder="Calle 1">
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="direccion2">Dirección 2 <span class="text-muted">(Opcional)</span></label>
+                                        <input type="text" class="form-control" id="direccion2" placeholder="Calle 2">
+                                    </div>
+            
+                                    <h2 class="mb-4">Comisión del Proyecto</h2>
+            
+                                    <div class="form-group">
+                                        <label for="monto-venta">Monto de Venta <span class="text-muted">(Opcional)</span></label>
+                                        <input type="text" class="form-control" id="monto-venta" placeholder="Porcentaje %">
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="monto-brokers">Monto Para Brokers <span class="text-muted">(Opcional)</span></label>
+                                        <input type="text" class="form-control" id="monto-brokers" placeholder="Porcentaje %">
+                                    </div>
+            
+                                    <h3 class="mb-4">Características del Inmueble</h3>
+
+                                    <div class="form-group">
+                                        <label for="direccion1">Facilidades Comunes <span class="text-muted"></span></label>
+                                        <input type="text" class="form-control" id="direccion1" placeholder="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="direccion1">Facilidades Eléctricas: <span class="text-muted"></span></label>
+                                        <input type="text" class="form-control" id="direccion1" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="direccion1">Exterior: <span class="text-muted"></span></label>
+                                        <input type="text" class="form-control" id="direccion1" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="direccion1">General: <span class="text-muted"></span></label>
+                                        <input type="text" class="form-control" id="direccion1" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="direccion1">Interior: <span class="text-muted"></span></label>
+                                        <input type="text" class="form-control" id="direccion1" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="direccion1">Políticas: <span class="text-muted"></span></label>
+                                        <input type="text" class="form-control" id="direccion1" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="direccion1">Ubicación: <span class="text-muted"></span></label>
+                                        <input type="text" class="form-control" id="direccion1" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="direccion1">Construcción: <span class="text-muted"></span></label>
+                                        <input type="text" class="form-control" id="direccion1" placeholder="">
+                                    </div>
+                                     
+                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+{% endblock %}

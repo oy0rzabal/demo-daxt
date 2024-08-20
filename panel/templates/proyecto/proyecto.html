@@ -1,0 +1,33 @@
+{% extends '../index_master.html' %}
+
+{% block titulo %} Proyectos {% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Proyectos Registrados</h2> <td><a href="{% url 'guardar_proyecto' %}" class="btn btn-info">Nuevo Proyecto</a></td>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre Privado</th>
+                <th>Categoría</th>
+                <th>Estado</th>
+                <th>Informacion</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iterar sobre los proyectos almacenados en la base de datos -->
+            <tr>
+                <td>Torres Acapulco Diamante</td>
+                <td>Departamento</td>
+                <td>En Construcción</td>
+                <td><a href="{% url 'mostrar_proyecto' %}" class="btn btn-info">Ver Detalles</a></td>
+                
+            </tr>
+            <!-- Más proyectos aquí -->
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

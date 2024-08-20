@@ -1,0 +1,228 @@
+{% extends '../index_master.html'%}
+
+{% block titulo %}  {% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <!-- Tu formulario aquí -->
+        </div>
+    </div>
+</div>
+
+  <div class="card">
+    <div class="card-header">
+      <a name="" id="" class="btn btn-sucess" href="#" role="button"> Agregar nuevo Cliente</a>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">Terreno</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>FECHA:</th>
+            <td></td>
+            <th>Promedio $/m2 Venta</th>
+            <td></td>
+            <th>Promedio $/m2 Homologado</th>
+            <td></td>
+          </tr>
+      </table>
+    </div>
+  </div>
+
+<h3>1.- Ubicación</h3>
+<table>
+  <tr>
+    <th>Muestra No.</th>
+    <th>Calle</th>
+    <th>Av. Costera de las</th>
+    <th>Av. Secundaria</th>
+    <th>Condicionada</th>
+    <th>3.- Precio de Venta</th>
+    <th>5.- Foto</th>
+  </tr>
+  <tr>
+    <td rowspan="4" style="background-color:green">1</td>
+    <td rowspan="4"></td>
+    <td rowspan="4">Barra Diamante</td>
+    <td>Servicios</td>
+    <td>0</td>
+    <td rowspan="4"></td>
+    <td rowspan="4"></td>
+  </tr>
+  <tr>
+    <td>Equipamiento</td>
+    <td></td>
+    <td rowspan="2"></td>
+  </tr>
+  <tr>
+    <td>Local</td>
+  </tr>
+  <tr>
+    <td>a 1 via</td>
+    <td></td>
+    <td rowspan="2"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Sector</td>
+    <td>Acapulco de Juáre</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>Numero de frentes o salidas</td>
+    <td></td>
+    <td></td>
+    <td>Precio de venta</td>
+    <td>$4,797,000.00</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Negociable</td>
+    <td>No</td>
+  </tr>
+</table>
+
+<div class="card">
+  <div class="card-header">
+    <a name="" id="" class="btn btn-sucess" href="#" role="button"> Agregar nuevo Cliente</a>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">Datos Tecnicos</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Area</th>
+          <td></td>
+          <th>Pisos</th>
+          <td>0</td>
+          <th>Muy Baja</th>
+          <th>4.- Informacion</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Frente</th>
+          <td>800.00 m</td>
+          <th>Forma</th>
+          <td></td>
+          <th>Poco Regular</th>
+          <th>Fuente</th>
+          <td>Venta Terreno 1599 m² Acceso Coster</td>
+        </tr>
+        <tr>
+          <th>Fondo</th>
+          <td>800.00 m</td>
+          <th>Pendiente</th>
+          <td></td>
+          <th>(+)Pronunciada</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Rel Fr-Fo</th>
+          <td>1.00 Buena</td>
+          <th>Derrocamiento</th>
+          <td></td>
+          <th>Complejo</th>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>COS PB</th>
+          <td>70% Alto</td>
+          <th>Aporte a Diseño</th>
+          <td></td>
+          <th>Poco Favorable</th>
+          <td></td>
+          <td></td>
+        </tr>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <a name="" id="" class="btn btn-sucess" href="#" role="button"> Agregar nuevo Cliente</a>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">Homologacion</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>($/m2)V</th>
+          <th>(FAC)</th>
+          <th>(FSer)</th>
+          <th>(FEq)</th>
+          <th>(FSal)</th>
+          <th>(Ff-f)</th>
+          <th>(FOC)</th>
+          <th>(FEd)</th>
+          <th>(FFor)</th>
+          <th>(FPen)</th>
+          <th>(FDer)</th>
+          <th>(FDis)</th>
+          <th>(FNeg)</th>
+          <th>(FRes)</th>
+          <th>(FHom)</th>
+          <th>($/m2)H</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>$3.000.00</td>
+          <td>1.10</td>
+          <td>0.80</td>
+          <td>1.00</td>
+          <td>1.10</td>
+          <td>1.20</td>
+          <td>0.80</td>
+          <td>0.90</td>
+          <td>0.80</td>
+          <td>0.80</td>
+          <td>1.00</td>
+          <td>1.00</td>
+          <td>0.00</td>
+          <td></td>
+          <td>$</td>
+        </tr>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+{% endblock %}

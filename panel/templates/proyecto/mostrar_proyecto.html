@@ -1,0 +1,60 @@
+{% extends '../index_master.html' %}
+
+{% block titulo %}Detalle del Proyecto{% endblock %}
+
+{% block content %}
+<style>
+    .card-centered {
+        max-width: 800px;
+        margin: auto;
+    }
+    .edit-form {
+        display: none; /* Oculta el formulario de edición por defecto */
+    }
+</style>
+<!-- Estilo -->
+{% for proyecto in proyectos %}
+<div class="container">
+    <h2 class="mb-4 text-center">Detalles del Proyecto</h2>
+    <div class="card">
+        <div class="card-body">
+            <h3>Características del Proyecto</h3>
+            <p><strong>Nombre Privado:</strong> {{ proyecto.nombre_propiedad }}</p>
+            <p><strong>Categoría:</strong> {{ proyecto.categoria }}</p>
+            <p><strong>Código Interno:</strong> {{ proyecto.codigo_interno }}</p>
+            <p><strong>Cantidad de Niveles:</strong> {{ proyecto.cantidad_niveles }}</p>
+            <p><strong>Condición / Estado:</strong> {{ proyecto.condicion_estado }}</p>
+            <p><strong>Estilo:</strong> {{ proyecto.estilo }}</p>
+            <p><strong>¿Propiedad Exclusiva?:</strong> {{ proyecto.propiedad_exclusiva }}</p>
+            <p><strong>¿Propiedad Destacada?:</strong> {{ proyecto.propiedad_destacada }}</p>
+            
+            <h3>Ubicación</h3>
+            <p><strong>País:</strong> {{ proyecto.pais }}</p>
+            <p><strong>Estado/Provincia:</strong> {{ proyecto.estado_provincia }}</p>
+            <p><strong>Ciudad/Delegación:</strong> {{ proyecto.ciudad_delegacion }}</p>
+            <p><strong>Dirección 1:</strong> {{ proyecto.direccion1 }}</p>
+            <p><strong>Dirección 2:</strong> {{ proyecto.direccion2 }}</p>
+            
+            <h3>Comisión del Proyecto</h3>
+            <p><strong>Monto de Venta:</strong> {{ proyecto.monto_venta }}</p>
+            <p><strong>Monto Para Brokers:</strong> {{ proyecto.monto_brokers }}</p>
+            
+            <h3>Características del Inmueble</h3>
+            <p><strong>Facilidades Comunes:</strong> {{ proyecto.facilidades_comunes }}</p>
+            <p><strong>Facilidades Eléctricas:</strong> {{ proyecto.facilidades_electricas }}</p>
+            <p><strong>Exterior:</strong> {{ proyecto.exterior }}</p>
+            <p><strong>General:</strong> {{ proyecto.general }}</p>
+            <p><strong>Interior:</strong> {{ proyecto.interior }}</p>
+            <p><strong>Políticas:</strong> {{ proyecto.politicas }}</p>
+            <p><strong>Ubicación:</strong> {{ proyecto.ubicacion }}</p>
+            <p><strong>Construcción:</strong> {{ proyecto.construccion }}</p>
+            
+            {% if proyecto.imgen_proyecto %}
+                <h3>Imagen del Proyecto</h3>
+                <img src="{{ proyecto.imgen_proyecto.url }}" alt="Imagen del Proyecto" class="img-fluid">
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
